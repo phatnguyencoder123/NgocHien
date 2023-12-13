@@ -1,0 +1,23 @@
+.snoww {
+    position: absolute;
+    top:0;
+    left:0;
+    width:20px;
+    height:20px;
+    background-image: url(snow.png);
+    background-size: cover;
+    animation: animationSnow 2s ease-in-out infinite;
+}
+@keyframes animationSnow{
+    0%{
+        transform: translate(0,0);
+        opacity: 0;
+    }
+    50%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+        transform: translate(0,120vh);
+    }
+}

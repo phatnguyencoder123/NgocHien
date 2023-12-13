@@ -1,0 +1,169 @@
+@import url('https://fonts.googleepis.com/css2?family=Dosis:wght@300&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Dosis', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(#a2000a, #cf0000);
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.container .circle 
+{
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 250px;
+    height: 250px;
+    background: #fff;
+    border-radius: 50%;
+}
+
+.controls {
+    width: 100;
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    position: relative;
+    top: 59%;
+}
+
+.btn-play {
+    position: relative;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: rgb(238, 10, 10);
+    cursor: pointer;
+    border: none;
+}
+
+.btn-play span{
+    position:absolute;
+    top:50%;
+    left: 25%;
+    transform: translateY(-50%);
+    width: 10px;
+    height: 30px;
+    border-radius: 2px;
+    background-color: beige;
+    clip-path: polygon(0 0, 100% 0,100% 100%,0% 100%);
+    transition: .5s;
+}
+
+.btn-play span:nth-child(2){
+    left: 55%;
+    transform-origin: center;
+}
+
+.btn-play.pause span:nth-child(2){
+    transform: translateY(-50%) scaleY(0);
+}
+
+.btn-play.pause span:nth-child(1){
+    width: 35%;
+    left: 53%;
+    transform: translate(-50%,-50%);
+    border-radius: 0;
+    clip-path: polygon(0 0, 100% 50%,100% 50%,0% 100%);
+}
+
+.btn-play.pause{
+    animation: pulse 3s linear infinite;
+}
+
+@keyframes pulse{
+    0%{
+        box-shadow: 0;
+    }
+    50%{
+        box-shadow: 0 0 0 2px #ccc;
+    }
+    10%{
+        box-shadow: 0 0 0 2px #ccc;
+    }
+}
+
+.container .circle::before 
+{
+    content: '';
+    position: absolute;
+    inset: -300px -300px;
+    background: url(santa.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 550px;
+    animation: animate 4s ease-in-out infinite;
+}
+@keyframes animate
+{
+    0%,100%
+    {
+        transform: translateY(25px);
+    }
+    50%
+    {
+        transform: translateY(-25px);
+    }
+}
+.container .circle::after
+{
+    content: 'Merry Christmas To You 😊';
+    position: absolute;
+    inset: -100px -200px;
+    font-size: 4em;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    color: #fff;
+    font-family: Edwardian Script ITC;
+}
+.container .snow
+{
+    position: relative;
+    display: flex;
+}
+.container .snow span
+{
+    position: relative;
+    min-width: 5px;
+    height: 5px;
+    background: #fff;
+    border-radius: 50%;
+    margin: 0 2vw;
+    box-shadow: -100px 20px 5px #fff,
+    100px 20px 10px #fff;
+    animation: animateSnow 15s linear infinite;
+    animation-duration: calc(65s / var(--i));
+}
+.container .snow span:nth-child(even)
+{
+    min-width: 10px;
+    height: 10px;
+}
+@keyframes animateSnow
+{
+    0%
+    {
+        transform: translateY(-10vh);
+    }
+    100%
+    {
+        transform: translateY(100vh);
+    }
+}
