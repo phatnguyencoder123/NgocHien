@@ -13,6 +13,8 @@ body {
     align-items: center;
     min-height: 100vh;
     background: linear-gradient(#a2000a, #cf0000);
+    background-size: cover;
+    background-position: center;
 }
 
 .container {
@@ -40,7 +42,7 @@ body {
     justify-content: center;
     margin: auto;
     position: relative;
-    top: 59%;
+    margin-top: 367px;
 }
 
 .btn-play {
