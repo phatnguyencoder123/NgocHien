@@ -1,20 +1,17 @@
-@import url('https://fonts.googleepis.com/css2?family=Dosis:wght@300&display=swap');
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Dosis', sans-serif;
 }
 
 body {
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background: url('background.jpg') no-repeat;
-    background-size: cover;
-    background-position: center;
+    background: linear-gradient(#a2000a, #cf0000);
 }
 
 .container {
@@ -22,6 +19,7 @@ body {
     width: 100%;
     height: 100vh;
     overflow: hidden;
+    cursor: pointer;
 }
 
 .container .circle 
@@ -37,12 +35,12 @@ body {
 }
 
 .controls {
-    width: 100;
     display: flex;
     justify-content: center;
     margin: auto;
-    position: relative;
-    margin-top: 367px;
+    position: absolute;
+    top: 101%;
+    left: 43%;
 }
 
 .btn-play {
@@ -51,7 +49,6 @@ body {
     height: 50px;
     border-radius: 50%;
     background: rgb(238, 10, 10);
-    cursor: pointer;
     border: none;
 }
 
