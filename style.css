@@ -1,0 +1,114 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(#100746, #0343cf);
+}
+
+.container {
+    position: fixed;
+    width: 110%;
+    height: 100vh;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.container::before{
+    content: '';
+    position:absolute;
+    bottom: 0;
+    width: 100%;
+    height:80px;
+    background: url(tree.png);
+    z-index: 100;
+}
+
+.container .circle 
+{
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 250px;
+    height: 250px;
+    background: #f0fd5c;
+    border-radius: 50%;
+}
+
+.container .circle::before 
+{
+    content: '';
+    position: absolute;
+    inset: -540px -540px;
+    background: url(santa.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100vw auto;
+    animation: animate 6s ease-in-out infinite;
+}
+@keyframes animate
+{
+    0%,100%
+    {
+        transform: translateY(30px);
+    }
+    50%
+    {
+        transform: translateY(-10px);
+    }
+}
+.container .circle::after
+{
+    content: "👉19/09/2005😼\A\" You always shine at the right moment, just like the moon. \A I hope you will always achieve your success \A and remain as beautiful as the moon forever.\"";
+    text-align: center;
+    white-space: pre-line;
+    position: absolute;
+    inset: -160px -200px;
+    font-size: 2em;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    color: #fff;
+    font-family: Edwardian Script ITC;
+}
+.container .snow
+{
+    position: relative;
+    display: flex;
+}
+.container .snow span
+{
+    position: relative;
+    min-width: 10px;
+    height: 10px;
+    background: #e6f27f;
+    border-radius: 50%;
+    margin: 0 4vw;
+    box-shadow: -100px 20px 5px #e6f27f,
+    100px 20px 10px #e6f27f;
+    animation: animateSnow 15s linear infinite;
+    animation-duration: calc(65s / var(--i));
+}
+.container .snow span:nth-child(even)
+{
+    min-width: 5px;
+    height: 5px;
+}
+@keyframes animateSnow
+{
+    0% {
+        transform: translate(-10vw, -10vh);
+    }
+    100% {
+        transform: translate(40vw, 100vh);
+    }
+}
