@@ -11,7 +11,7 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background: linear-gradient(#a2000a, #cf0000);
+    background: linear-gradient(#100746, #0343cf);
 }
 
 .container {
@@ -27,9 +27,9 @@ body {
     position:absolute;
     bottom: 0;
     width: 100%;
-    height:160px;
+    height:80px;
     background: url(tree.png);
-    z-index: 1;
+    z-index: 100;
 }
 
 .container .circle 
@@ -40,7 +40,7 @@ body {
     transform: translateX(-50%);
     width: 250px;
     height: 250px;
-    background: #fff;
+    background: #f0fd5c;
     border-radius: 50%;
 }
 
@@ -48,30 +48,32 @@ body {
 {
     content: '';
     position: absolute;
-    inset: -300px -300px;
+    inset: -540px -540px;
     background: url(santa.png);
     background-position: center;
     background-repeat: no-repeat;
-    background-size: 550px;
-    animation: animate 4s ease-in-out infinite;
+    background-size: 100vw auto;
+    animation: animate 6s ease-in-out infinite;
 }
 @keyframes animate
 {
     0%,100%
     {
-        transform: translateY(25px);
+        transform: translateY(30px);
     }
     50%
     {
-        transform: translateY(-25px);
+        transform: translateY(-10px);
     }
 }
 .container .circle::after
 {
-    content: 'Merry Christmas To You 😊';
+    content: "👉19/09/2005😼\A\" You always shine at the right moment, just like the moon. \A I hope you will always achieve your success \A and remain as beautiful as the moon forever.\"";
+    text-align: center;
+    white-space: pre-line;
     position: absolute;
-    inset: -100px -200px;
-    font-size: 4em;
+    inset: -160px -200px;
+    font-size: 2em;
     display: flex;
     justify-content: center;
     align-items: flex-end;
@@ -86,29 +88,27 @@ body {
 .container .snow span
 {
     position: relative;
-    min-width: 5px;
-    height: 5px;
-    background: #fff;
+    min-width: 10px;
+    height: 10px;
+    background: #e6f27f;
     border-radius: 50%;
-    margin: 0 2vw;
-    box-shadow: -100px 20px 5px #fff,
-    100px 20px 10px #fff;
+    margin: 0 4vw;
+    box-shadow: -100px 20px 5px #e6f27f,
+    100px 20px 10px #e6f27f;
     animation: animateSnow 15s linear infinite;
     animation-duration: calc(65s / var(--i));
 }
 .container .snow span:nth-child(even)
 {
-    min-width: 10px;
-    height: 10px;
+    min-width: 5px;
+    height: 5px;
 }
 @keyframes animateSnow
 {
-    0%
-    {
-        transform: translateY(-10vh);
+    0% {
+        transform: translate(-10vw, -10vh);
     }
-    100%
-    {
-        transform: translateY(100vh);
+    100% {
+        transform: translate(40vw, 100vh);
     }
 }

@@ -2,22 +2,23 @@
     position: absolute;
     top:0;
     left:0;
-    width:20px;
-    height:20px;
+    width:60px;
+    height:60px;
     background-image: url(snow.png);
     background-size: cover;
-    animation: animationSnow 2s ease-in-out infinite;
+    animation: animationSnow 5s ease-in-out infinite;
 }
 @keyframes animationSnow{
-    0%{
-        transform: translate(0,0);
-        opacity: 0;
+    0% {
+        transform: translate(-20vw, -40vh);
+        opacity: 0.5;
     }
-    50%{
+    50% {
+        transform: translate(20vw, 40vh);
         opacity: 1;
     }
-    100%{
+    100% {
+        transform: translate(30vw, 60vh);
         opacity: 0;
-        transform: translate(0,120vh);
     }
 }

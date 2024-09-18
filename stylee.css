@@ -34,7 +34,7 @@ header {
 
 .navigation .btnLogin-popup:hover {
     background: #fff;
-    color: #162938;
+    color: #323816;
 }
 
 body {
@@ -81,7 +81,7 @@ body {
     height: 45px;
     background: #162938;
     font-size: 2em;
-    color: #fff;
+    color:#f898ef;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -104,7 +104,7 @@ body {
     left: 30px;
     transform: translate(-50%);
     font-size: 0.4cm;
-    color: #162938;
+    color: #f898ef;
     font-weight: 500;
     pointer-events: none;
     transition: .5s;
@@ -123,7 +123,7 @@ body {
     border: none;
     outline: none;
     font-size: 1em;
-    color: #162938;
+    color: #f898ef;
     font-weight: 600;
     padding: 0 35px 0 5px;
 }
@@ -132,14 +132,14 @@ body {
     position: absolute;
     right: 8px;
     font-size: 0.6cm;
-    color: #162938;
+    color: #f898ef;
     line-height: 57px;
     cursor: pointer;
 }
 
 .remember-forgot{
     font-size: .3cm;
-    color: #162938;
+    color: #f898ef;
     font-weight: 500;
     margin: -15px 0 15px; 
     display: flex;
@@ -147,17 +147,17 @@ body {
 }
 
 .remember-forgot label input {
-    accent-color: #162938;
+    accent-color: #f898ef;
     margin-right: 3px;
 }
 
 .remember-forgot a {
-    color: #162938;
+    color: #f898ef;
     text-decoration: none;
 }
 
 .remember-forgot a {
-    color:#162938;
+    color:#f898ef;
     text-decoration: none;
 }
 
@@ -174,20 +174,20 @@ body {
     border-radius: 50px;
     cursor: pointer;
     font-size: 0.5cm;
-    color: #fff;
+    color: #f898ef;
     font-weight: 500;
 }
 
 .login-register {
     font-size: .4cm;
-    color: #162938;
+    color: #f898ef;
     text-align: center;
     font-weight: 500;
     margin: 25px 0 10px;
 }
 
 .login-register p a {
-    color: #162938;
+    color: #f898ef;
     text-decoration: none;
     font-weight: 600;
 }
